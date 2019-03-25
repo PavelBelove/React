@@ -31,13 +31,13 @@ class Manager extends Employee {
 
     adDeveloper(dev) {
         this.team[dev.name] = dev;
-        dev.setManager(this); // разраб узнает о переходе в команду
+        dev.setManager(this);       // разраб узнает о переходе в команду
     }
 
     removeDeveloper(dev){
         if (this.team[dev.name]){
-            this.team[dev.name] = null; // оставляю запись  о том, что разраб тут когда-то работал но удаляю ссылку на объект
-            //delete this.team[dev.name]; // Способ удаления целиком. Если разраб так сильно накосячил, что и вспоминать о нем не хочется.
+            this.team[dev.name] = null;      // оставляю запись  о том, что разраб тут когда-то работал но удаляю ссылку на объект
+            //delete this.team[dev.name];        // Способ удаления целиком. Если разраб так сильно накосячил, что и вспоминать о нем не хочется.
         };
     };
 };
@@ -48,7 +48,7 @@ class Developer extends Employee {
 
     setManager(man){
        if (this.manager){
-           this.manager.removeDeveloper(this); //сначала увольняемся от старого менеджера
+           this.manager.removeDeveloper(this);      //сначала увольняемся от старого менеджера
        };
         this.manager = man;        
     }
@@ -67,10 +67,10 @@ let superman = new Manager("Vova", 1, 25, 1000000, 'frontend');
 let dev = new Developer("Petya", 1, 25, 50000, 'frontend');
 
 console.log(man.info);
-dev.getManager();  // Петя пока без команды
-man.adDeveloper(dev);   // определили к менеджеру
-console.log(man.team);  //  Петя принят в команду
-superman.adDeveloper(dev);  // Петя идет на повышение
-console.log(man.team);  // Осталась запись что Петр тут работал
-console.log(superman.team); // А сам он в новой команде
-console.log(superman.team["Petya"].info) // До Пети можно достучаться через руководство.
+dev.getManager();       // Петя пока без команды
+man.adDeveloper(dev);        // определили к менеджеру
+console.log(man.team);       //  Петя принят в команду
+superman.adDeveloper(dev);          // Петя идет на повышение
+console.log(man.team);       // Осталась запись что Петр тут работал
+console.log(superman.team);         // А сам он в новой команде
+console.log(superman.team["Petya"].info)        // До Пети можно достучаться через руководство.
