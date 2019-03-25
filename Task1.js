@@ -9,5 +9,5 @@ function loop(times = 0, callback = null){
 
 let func = param => {console.log("callback run " +param )};
 
-loop()
-//loop(2, func);
+//loop();
+loop(5, func);
