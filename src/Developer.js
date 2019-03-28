@@ -3,8 +3,11 @@ export class Developer {
         this.name = name;
     }
 
-    infoPrompt(){
-        prompt("class from Developer.js")
+    info(){
+        //console.log('Work!')
+        prompt("Сообщение из файла Developer.js");
     }
 }
+let dev = new Developer("Vasya");
+dev.info();
 

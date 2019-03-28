@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import App from './App';
-import Developer from './Developer.js'
+import Developer from './Developer'
 
 ReactDom.render(
   <App />,
@@ -9,5 +9,4 @@ ReactDom.render(
   document.querySelector('#web-page')
 );
 
-let dev = new Developer("Vasya");
-dev.infoPrompt();
+
