@@ -1,12 +1,14 @@
 
 import React, { Component } from 'react';
-
+import $ from 'jquery';
 import WelcomeModal from './WelcomeModal';
 import Menu from './Blog';
 
 import './style.css';
 
-class App extends Component {
+class App extends React.Component {
+
+
   render() {
     const MENUITEMS = [
       {
@@ -23,11 +25,13 @@ class App extends Component {
         date: '4.04.19'
       },
     ];
+
     return (
       <>
         <Menu items={MENUITEMS} />
         <WelcomeModal />
-      
+
+
       </>
     );
   }

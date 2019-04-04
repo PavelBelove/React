@@ -6,7 +6,7 @@ import './style.css';
 class Blog extends React.Component {
     render() {
         const POSTS = this.props.items.map((item, index) => {
-            return <Post key={index} title={item.title} postBody={item.postBody} date = {item.date} />
+            return <Post key={index} title={item.title} postBody={item.postBody} date={item.date} />
         });
         return (
             <>
