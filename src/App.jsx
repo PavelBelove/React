@@ -1,5 +1,6 @@
 
 import React, { Component } from 'react';
+
 import WelcomeModal from './WelcomeModal';
 import Menu from './Blog';
 
@@ -25,9 +26,8 @@ class App extends Component {
     return (
       <>
         <Menu items={MENUITEMS} />
-        <h2>Форма авторизации</h2>
-        <WelcomeModal/>
-        
+        <WelcomeModal />
+      
       </>
     );
   }
