@@ -35,7 +35,7 @@ class WelcomeModal extends React.Component {
                             </div>
                             <div className="modal-footer">
                                 <button type="button" className="btn btn-secondary" data-dismiss="modal" onClick={() => {
-                                    this.setState({ modal: true }); 
+                                    this.setState({ modal: false }); 
                                     console.log(`Обновленный state: `, this.state);
                                 }} >Close</button>
                             </div>
